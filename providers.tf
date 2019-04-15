@@ -3,7 +3,9 @@
 #
 
 provider "aws" {
-  region = "us-east-1"
+  region    = "${var.aws_region}"
+  profile   = "${var.aws_profile}"   # Variable to search the profile in the shared credentials file (e.g. ~/.aws/credentials)
+ 
 }
 
 # Using these data sources allows the configuration to be
